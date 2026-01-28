@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecocraft - Premium Plywood Solutions</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/09492618d1.js" crossorigin="anonymous"></script>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.7s ease-out forwards',
+                        'fade-in-down': 'fadeInDown 0.7s ease-out forwards',
+                        'fade-in-left': 'fadeInLeft 0.7s ease-out forwards',
+                        'fade-in-right': 'fadeInRight 0.7s ease-out forwards',
+                        'slide-in-left': 'slideInLeft 1s ease-out forwards',
+                        'slide-in-right': 'slideInRight 1s ease-out forwards',
+                        'pulse-slow': 'pulse 2s infinite',
+                        'scale-in': 'scaleIn 0.8s ease-out forwards',
+                        'gradient-shift': 'gradientShift 3s ease infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        fadeInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        slideInLeft: {
+                            '0%': { transform: 'translateX(-100%)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        slideInRight: {
+                            '0%': { transform: 'translateX(100%)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        pulse: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.7' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        gradientShift: {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' },
+                        },
+                    },
+                    backgroundImage: {
+                        'dots-pattern': 'radial-gradient(#10b981 1px, transparent 1px)',
+                        'grid-pattern': 'linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)',
+                    },
+                    backgroundSize: {
+                        'pattern-20': '20px 20px',
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        /* Custom styles that can't be done with Tailwind */
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #10b981, #059669);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #059669, #047857);
+        }
+        
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* For print */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-montserrat bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-sm shadow-md z-50 transition-transform duration-300">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+    <!-- Logo Container -->
+    <div class="relative group">
+        <!-- Glow Effect -->
+        <div class="absolute -inset-2 bg-gradient-to-r from-emerald-400/30 to-green-500/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+        
+        <!-- Main Logo Box -->
+       <div class="flex items-center">
+    <img 
+        img 
+        src="./ image /logo.png" 
+        alt="Ecocraft Logo"
+        class="h-14 w-auto md:h-16 object-contain"
+    >
+    
+</div>
+
+    </div>
+</div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home" class="text-gray-700 hover:text-green-600 font-semibold transition-colors duration-300">Home</a></li>
+                    <li><a href="./about.html" class="text-gray-700 hover:text-green-600 font-semibold transition-colors duration-300">About</a></li>
+                    <!-- <li><a href="#products" class="text-gray-700 hover:text-green-600 font-semibold transition-colors duration-300">Products</a></li> -->
+                    <!-- <li><a href="#projects" class="text-gray-700 hover:text-green-600 font-semibold transition-colors duration-300">Projects</a></li> -->
+                    <li><a href="./contact.html" class="text-gray-700 hover:text-green-600 font-semibold transition-colors duration-300">Contact</a></li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-green-600 transition-colors duration-300">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 animate-fade-in-down">
+                <ul class="space-y-4 bg-white p-4 rounded-lg shadow-lg">
+                    <li><a href="#home" class="block text-gray-700 hover:text-green-600 font-semibold py-2 transition-colors duration-300">Home</a></li>
+                    <li><a href="./about.html" class="block text-gray-700 hover:text-green-600 font-semibold py-2 transition-colors duration-300">About Us</a></li>
+                    <!-- <li><a href="#products" class="block text-gray-700 hover:text-green-600 font-semibold py-2 transition-colors duration-300">Products</a></li> -->
+                    <!-- <li><a href="#projects" class="block text-gray-700 hover:text-green-600 font-semibold py-2 transition-colors duration-300">Projects</a></li> -->
+                    <li><a href="./contact.html" class="block text-gray-700 hover:text-green-600 font-semibold py-2 transition-colors duration-300">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Fixed Side Buttons -->
+    <a href="#contact-form" class="fixed right-0 top-1/2 transform -translate-y-1/2 bg-red-500 text-white py-3 px-3 rounded-l-lg shadow-lg hover:bg-red-600 transition-all duration-300 z-40 group">
+        <span class="hidden lg:inline-block group-hover:translate-x-2 transition-transform duration-300">Enquire Now</span>
+        <span class="lg:hidden"><i class="fas fa-envelope"></i></span>
+    </a>
+
+    <a href="https://wa.me/917736688827" target="_blank" class="fixed right-0 top-1/2 transform -translate-y-1/2 mt-16 bg-green-500 text-white py-3 px-4 rounded-l-lg shadow-lg hover:bg-green-600 transition-all duration-300 z-40 group">
+        <i class="fab fa-whatsapp text-xl"></i>
+        <span class="absolute left-full ml-2 bg-green-600 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Chat with us</span>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="fixed bottom-8 right-8 p-3 rounded-full bg-green-600 text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 z-40 hidden transition-all duration-300 hover:scale-110 shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- Hero Slider -->
+    <section class="pt-20" id="home">
+
+        
+        <div class="swiper mySwiper">
+            
+            <div class="swiper-wrapper">
+                <div class="swiper-slide relative">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                         alt="Modern Interior Design" 
+                         class="w-full h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in-up" data-delay="100">
+                                Premium Plywood Solutions
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up" data-delay="200">
+                                40 Years of Excellence in Interior Infrastructure
+                            </p>
+                            <a href="#products" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 animate-fade-in-up" data-delay="300">
+                                Explore Products
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide relative">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                         alt="Eco-friendly Materials" 
+                         class="w-full h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                                Sustainable Excellence
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8">
+                                Eco-friendly Practices with Lifetime Warranty
+                            </p>
+                            <a href="#about" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Assurance Section -->
+    <section class="py-16 bg-gradient-to-b from-gray-50 to-white" id="about">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-lg font-semibold text-green-600 mb-2 tracking-wider">
+                    ____ ECOCRAFT ASSURANCE ____
+                </h3>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Experience Like Never Before With
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">
+                        Ecocraft
+                    </span>
+                </h1>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Premium quality plywood solutions backed by 40 years of expertise and innovation
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <!-- Card 1 -->
+                <div class="bg-gray-900 rounded-3xl p-8 relative overflow-hidden group hover:transform hover:scale-105 transition-all duration-500 animate-fade-in-up" data-delay="100">
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-paint-brush text-white text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mt-8 mb-3">Bespoke</h4>
+                    <p class="text-gray-300">
+                        Each sheet is crafted as a detailed masterpiece, tailored to your specific requirements
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-900 rounded-3xl p-8 relative overflow-hidden group hover:transform hover:scale-105 transition-all duration-500 animate-fade-in-up" data-delay="200">
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-shield-alt text-white text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mt-8 mb-3">Authenticity</h4>
+                    <p class="text-gray-300">
+                        Plywood that assures long-term durability with certified quality standards
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-900 rounded-3xl p-8 relative overflow-hidden group hover:transform hover:scale-105 transition-all duration-500 animate-fade-in-up" data-delay="300">
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-th-large text-white text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mt-8 mb-3">Versatility</h4>
+                    <p class="text-gray-300">
+                        A world of choices at your fingertips for every interior design need
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-gray-900 rounded-3xl p-8 relative overflow-hidden group hover:transform hover:scale-105 transition-all duration-500 animate-fade-in-up" data-delay="400">
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-leaf text-white text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mt-8 mb-3">Sustainability</h4>
+                    <p class="text-gray-300">
+                        Committed to eco-friendly practices and sustainable manufacturing
+                    </p>
+                </div>
+            </div>
+
+            <!-- Counter Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="animate-fade-in-up" data-delay="100">
+                    <div class="text-4xl md:text-5xl lg:text-6xl font-bold text-green-600 mb-2 count-up" data-target="4500000">0</div>
+                    <div class="text-lg font-semibold text-gray-700">Sheets Per Annum</div>
+                    <div class="w-24 h-1 bg-green-500 mx-auto mt-4"></div>
+                </div>
+                
+                <div class="animate-fade-in-up" data-delay="200">
+                    <div class="text-4xl md:text-5xl lg:text-6xl font-bold text-green-600 mb-2 count-up" data-target="2500">0</div>
+                    <div class="text-lg font-semibold text-gray-700">Sales Outlets</div>
+                    <div class="w-24 h-1 bg-green-500 mx-auto mt-4"></div>
+                </div>
+                
+                <div class="animate-fade-in-up" data-delay="300">
+                    <div class="text-4xl md:text-5xl lg:text-6xl font-bold text-green-600 mb-2 count-up" data-target="500000">0</div>
+                    <div class="text-lg font-semibold text-gray-700">Delighted Customers</div>
+                    <div class="w-24 h-1 bg-green-500 mx-auto mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section class="py-16 bg-gradient-to-r from-gray-50 to-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 animate-fade-in-left">
+                    <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                         alt="Ecocraft Legacy" 
+                         class="rounded-2xl shadow-2xl w-full h-[400px] object-cover">
+                </div>
+                
+                <div class="lg:w-1/2 animate-fade-in-right">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 pb-4 border-b-2 border-green-600 inline-block">
+                        Our Legacy
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Celebrating a remarkable 40-year journey since 1984, Ecocraft stands as a leading force in the interior infrastructure industry. With an installed capacity of 4.50 million sheets per annum, we deliver products that represent invaluable investments for our customers.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Our commitment extends beyond quality to include lifetime assurance and sustainable practices that have defined our legacy for four decades.
+                    </p>
+                    <a href="#about" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                        Explore Our Journey
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-16 bg-gray-900" id="products">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 animate-fade-in-left">
+                    <div class="bg-gray-800 rounded-2xl p-8 shadow-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-1 bg-green-500 mr-4"></div>
+                            <h3 class="text-green-500 font-semibold text-lg uppercase tracking-wider">
+                                ECOCRAFT PRODUCTS
+                            </h3>
+                        </div>
+                        
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">
+                            Transform Interiors Into Purposeful Spaces
+                        </h2>
+                        
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Only Indian plywood company approved by Lloyds-UK (BS 1088 Standard)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">World's only BWP resisting boiling water for 200+ hours</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Comprehensive lifetime warranty on all products</span>
+                            </li>
+                        </ul>
+                        
+                        <!-- Mini Product Slider -->
+                        <div class="swiper mySwiper2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                         alt="Product 1" 
+                                         class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                         alt="Product 2" 
+                                         class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                         alt="Product 3" 
+                                         class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 animate-fade-in-right">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                         alt="Premium Plywood" 
+                         class="rounded-2xl shadow-2xl w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 animate-fade-in-left">
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">
+                        All-In-One Convenience
+                    </h3>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Explore our comprehensive tools designed to simplify your interior planning and budgeting process. Your convenience is our priority.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="group">
+                            <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors duration-300">
+                                    <i class="fas fa-calculator text-green-600 text-2xl"></i>
+                                </div>
+                                <h4 class="font-semibold text-lg text-gray-800 mb-2">Product Cost Calculator</h4>
+                                <p class="text-gray-600 text-sm">Accurate budgeting for your projects</p>
+                            </div>
+                        </div>
+                        
+                        <div class="group">
+                            <a href="#visualize" class="block">
+                                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors duration-300">
+                                        <i class="fas fa-palette text-green-600 text-2xl"></i>
+                                    </div>
+                                    <h4 class="font-semibold text-lg text-gray-800 mb-2">ColorBar Visualizer</h4>
+                                    <p class="text-gray-600 text-sm">Visualize colors and textures</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 animate-fade-in-right">
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Why Choose Ecocraft?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                    <i class="fas fa-award text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Certified Quality</h4>
+                                    <p class="text-gray-600">BS 1088 standard certification from Lloyds UK</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                    <i class="fas fa-shield-alt text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Lifetime Warranty</h4>
+                                    <p class="text-gray-600">Comprehensive warranty on all products</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                                    <i class="fas fa-leaf text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Eco-Friendly</h4>
+                                    <p class="text-gray-600">Sustainable manufacturing practices</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-16 bg-gray-50" id="projects">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-green-700 mb-4 pb-4 border-b-4 border-green-700 inline-block">
+                    Our Projects
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-6">
+                    Explore our portfolio of successful projects across various interior spaces
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg animate-fade-in-up" data-delay="100">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Bedroom Project" 
+                         class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Modern Bedroom</h3>
+                            <p class="text-gray-200">Elegant and functional bedroom design</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Bedroom
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg animate-fade-in-up" data-delay="200">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Dining Area" 
+                         class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Contemporary Dining</h3>
+                            <p class="text-gray-200">Stylish dining area design</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Dining
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg animate-fade-in-up" data-delay="300">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Living Area" 
+                         class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Luxury Living Room</h3>
+                            <p class="text-gray-200">Spacious and elegant living area</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Living
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#projects" class="inline-flex items-center bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                    View All Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Variants Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-4">
+                    Our Premium Variants
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Explore our extensive range of plywood variants designed for every need
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <!-- Variant 1 -->
+                <div class="group bg-gray-50 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-50 transition-colors duration-300 shadow-md">
+                        <i class="fas fa-hammer text-green-600 text-2xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Steel Series</h4>
+                    <p class="text-gray-600 text-sm">Ultra durable</p>
+                </div>
+
+                <!-- Variant 2 -->
+                <div class="group bg-gray-50 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-50 transition-colors duration-300 shadow-md">
+                        <i class="fas fa-tree text-green-600 text-2xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 mb-1">WPC Series</h4>
+                    <p class="text-gray-600 text-sm">Waterproof composite</p>
+                </div>
+
+                <!-- Variant 3 -->
+                <div class="group bg-gray-50 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-50 transition-colors duration-300 shadow-md">
+                        <i class="fas fa-crown text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Plywood Gold</h4>
+                    <p class="text-gray-600 text-sm">Premium grade</p>
+                </div>
+
+                <!-- Variant 4 -->
+                <div class="group bg-gray-50 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-50 transition-colors duration-300 shadow-md">
+                        <i class="fas fa-gem text-emerald-500 text-2xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 mb-1">PVC Emerald</h4>
+                    <p class="text-gray-600 text-sm">Luxury finish</p>
+                </div>
+
+                <!-- Variant 5 -->
+                <div class="group bg-gray-50 rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-50 transition-colors duration-300 shadow-md">
+                        <i class="fas fa-star text-gray-400 text-2xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Plywood Silver</h4>
+                    <p class="text-gray-600 text-sm">Standard grade</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#products" class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold">
+                    View All 15+ Variants
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gradient-to-r from-green-50 to-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    What Our Customers Say
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Trusted by thousands of satisfied customers across India
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg animate-fade-in-up" data-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Rajesh Kumar</h4>
+                            <p class="text-gray-600 text-sm">Architect, Mumbai</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "Ecocraft's premium plywood transformed our project. The quality and durability are unmatched!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg animate-fade-in-up" data-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Priya Sharma</h4>
+                            <p class="text-gray-600 text-sm">Interior Designer, Delhi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "The variety and quality of Ecocraft products make my design work so much easier. Highly recommended!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg animate-fade-in-up" data-delay="300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Arun Patel</h4>
+                            <p class="text-gray-600 text-sm">Contractor, Bangalore</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "Lifetime warranty and exceptional quality. Ecocraft is our go-to choice for all projects."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-green-600 to-emerald-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Space?
+            </h2>
+            <p class="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Get expert consultation and premium plywood solutions for your next project
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact-form" class="bg-white text-green-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    Request Callback
+                </a>
+                <a href="tel:+917736688827" class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center">
+                    <i class="fas fa-comment-alt mr-2"></i>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16 bg-white" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Get In Touch
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Have questions or ready to start your project? Contact us today!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="animate-fade-in-left">
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Our Office</h4>
+                                <p class="text-gray-600">
+GROUND, 8/76D, MANGALATHU BUILDING, KURIAM TO VAYALA ROAD, Jaigiri Christuraj Church,<br>KURAVILANGADU.P.O, Kuravilangad, Kottayam, Kerala, 686633
+</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone-alt text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Phone Number</h4>
+                                <p class="text-gray-600">+91 77366 88827<br>Mon-Sat: 9AM to 7PM</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Email Address</h4>
+                                <p class="text-gray-600">info@ecocraft.com<br>support@ecocraft.com</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-gray-100 hover:bg-green-100 rounded-full flex items-center justify-center transition-colors duration-300">
+                                    <i class="fab fa-facebook-f text-gray-600 hover:text-green-600"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-100 hover:bg-green-100 rounded-full flex items-center justify-center transition-colors duration-300">
+                                    <i class="fab fa-twitter text-gray-600 hover:text-green-600"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-100 hover:bg-green-100 rounded-full flex items-center justify-center transition-colors duration-300">
+                                    <i class="fab fa-instagram text-gray-600 hover:text-green-600"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-100 hover:bg-green-100 rounded-full flex items-center justify-center transition-colors duration-300">
+                                    <i class="fab fa-linkedin-in text-gray-600 hover:text-green-600"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="animate-fade-in-right">
+                    <form id="contact-form" class="bg-gray-50 rounded-2xl p-8 shadow-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-colors duration-300">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-colors duration-300">
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2" for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-colors duration-300">
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2" for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-colors duration-300">
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2" for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required
+                                      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-colors duration-300"></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">E</span>
+                        </div>
+                        <span class="text-2xl font-bold">
+                            <span class="text-green-500">ECO</span>
+                            <span class="text-white">CRAFT</span>
+                        </span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Leading plywood manufacturer with 40+ years of excellence in interior infrastructure solutions.
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        © 2026 Ecocraft. All rights reserved.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-green-500">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
+                        <!-- <li><a href="#products" class="text-gray-400 hover:text-white transition-colors duration-300">Products</a></li> -->
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors duration-300">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-green-500">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Plywood Series</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">PVC Series</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">WPC Boards</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Steel Series</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">All Variants</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-green-500">Stay Updated</h4>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to our newsletter for latest updates and offers.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" 
+                               class="flex-grow px-4 py-2 rounded-l-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-500">
+                        <button type="submit" 
+                                class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r-lg transition-colors duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p class="text-sm">
+                    ISO 9001:2015 Certified • BS 1088 Standard • Made in India
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Swipers
+        const swiper1 = new Swiper('.mySwiper', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+
+        const swiper2 = new Swiper('.mySwiper2', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        
+        if (scrollTopBtn) {
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.remove('hidden');
+                } else {
+                    scrollTopBtn.classList.add('hidden');
+                }
+            });
+            
+            scrollTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Counter Animation
+        function animateCounter(counter) {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current).toLocaleString();
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target.toLocaleString();
+                }
+            };
+            
+            updateCounter();
+        }
+
+        // Intersection Observer for counters
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.count-up').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        // Sticky Header
+        const header = document.querySelector('header');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                if (currentScroll > lastScroll) {
+                    // Scrolling down
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up
+                    header.style.transform = 'translateY(0)';
+                }
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitButton = this.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                
+                // Disable button and show loading
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+                
+                // Simulate API call
+                setTimeout(() => {
+                    alert('Thank you for your message! We will get back to you soon.');
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Re-enable button
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalText;
+                }, 1500);
+            });
+        }
+
+        // Animate elements on scroll
+        const animatedElements = document.querySelectorAll('[class*="animate-"]');
+        
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.getAttribute('data-delay') || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('opacity-100', 'translate-y-0', 'translate-x-0', 'scale-100');
+                    }, delay * 100);
+                    scrollObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animatedElements.forEach(element => {
+            // Set initial states
+            if (element.classList.contains('animate-fade-in-up') || element.classList.contains('animate-fade-in-down')) {
+                element.classList.add('opacity-0', 'translate-y-10');
+            }
+            if (element.classList.contains('animate-fade-in-left')) {
+                element.classList.add('opacity-0', '-translate-x-10');
+            }
+            if (element.classList.contains('animate-fade-in-right')) {
+                element.classList.add('opacity-0', 'translate-x-10');
+            }
+            if (element.classList.contains('animate-scale-in')) {
+                element.classList.add('opacity-0', 'scale-95');
+            }
+            
+            scrollObserver.observe(element);
+        });
+
+        // Initialize tooltips
+        const tooltips = document.querySelectorAll('[data-tooltip]');
+        tooltips.forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                const tooltipText = this.getAttribute('data-tooltip');
+                const tooltip = document.createElement('div');
+                tooltip.className = 'fixed z-50 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-lg';
+                tooltip.textContent = tooltipText;
+                document.body.appendChild(tooltip);
+                
+                const rect = this.getBoundingClientRect();
+                tooltip.style.top = (rect.top - tooltip.offsetHeight - 10) + 'px';
+                tooltip.style.left = (rect.left + rect.width / 2 - tooltip.offsetWidth / 2) + 'px';
+                
+                this.tooltipElement = tooltip;
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                if (this.tooltipElement) {
+                    this.tooltipElement.remove();
+                    this.tooltipElement = null;
+                }
+            });
+        });
+
+        // Add loaded class to body
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+            
+            // Trigger initial animations
+            setTimeout(() => {
+                document.querySelectorAll('.animate-fade-in-up[data-delay]').forEach((el, index) => {
+                    const delay = parseInt(el.getAttribute('data-delay')) * 100 || index * 100;
+                    setTimeout(() => {
+                        el.classList.add('opacity-100', 'translate-y-0');
+                    }, delay);
+                });
+            }, 300);
+        });
+    </script>
+</body>
+</html>

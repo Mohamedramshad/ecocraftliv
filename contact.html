@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EcoCraft | Premium Plywood Solutions</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/09492618d1.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .animate-slide-left {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .animate-slide-right {
+            animation: slideInRight 1s ease-out;
+        }
+
+        .animate-zoom-in {
+            animation: zoomIn 0.8s ease-out;
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        /* Hover Effects */
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #10b981, #059669);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #059669, #047857);
+        }
+
+        /* Form Input Focus */
+        .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+            border-color: #10b981;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eco-green': {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter bg-gray-50 text-gray-800">
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-eco-green-500 to-eco-green-700 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">E</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold tracking-tight">
+                            <span class="text-eco-green-600">ECO</span>
+                            <span class="text-gray-900">CRAFT</span>
+                        </h1>
+                        <p class="text-xs text-gray-500 -mt-1">Since 1984</p>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-eco-green-600 font-medium transition-colors duration-300">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-eco-green-600 font-medium transition-colors duration-300">About Us</a>
+                    <!-- <a href="products.html" class="text-gray-600 hover:text-eco-green-600 font-medium transition-colors duration-300">Products</a> -->
+                    <a href="contact.html" class="bg-gradient-to-r from-eco-green-500 to-eco-green-600 text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg transition-all duration-300">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden">
+                    <i class="fas fa-bars text-xl text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-16 bg-gradient-to-br from-eco-green-50 to-white overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2310b981" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <!-- Animated Badge -->
+                <div class="inline-flex items-center space-x-2 bg-white text-eco-green-700 px-4 py-2 rounded-full mb-6 shadow-sm animate-float">
+                    <i class="fas fa-headset"></i>
+                    <span class="font-semibold">24/7 Support Available</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Get in <span class="gradient-text">Touch</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
+                    Have questions or ready to start your project? Our team is here to help you with premium plywood solutions.
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="flex flex-wrap justify-center gap-8 mb-8">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-eco-green-600 mb-1">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            24 Hours
+                        </div>
+                        <div class="text-gray-600">Response Time</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-eco-green-600 mb-1">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            100%
+                        </div>
+                        <div class="text-gray-600">Customer Support</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-eco-green-600 mb-1">
+                            <i class="fas fa-clock mr-2"></i>
+                            40 Years
+                        </div>
+                        <div class="text-gray-600">Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-xl font-semibold text-eco-green-600 mb-4">CONTACT US</h2>
+                <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <span class="gradient-text">Ecocraft India</span> 
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Reach out to us through any of these channels. We're always ready to assist you.
+                </p>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 - Phone -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 animate-slide-left">
+                    <div class="w-20 h-20 bg-gradient-to-br from-eco-green-100 to-eco-green-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                        <i class='bx bxs-phone text-4xl text-eco-green-600'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 text-center mb-4">Calling Support</h3>
+                    <div class="space-y-4 text-center">
+                        <div>
+                            <p class="text-gray-600 mb-1">Primary Contact</p>
+                            <a href="tel:+919447440617" class="text-2xl font-bold text-eco-green-600 hover:text-eco-green-700 transition-colors">
+                                +91 9447440617
+                            </a>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 mb-1">Secondary Contact</p>
+                            <a href="tel:+917736688827" class="text-xl text-gray-800 hover:text-eco-green-600 transition-colors">
+                                +91 77366 88827
+                            </a>
+                        </div>
+                        <div class="pt-4">
+                            <p class="text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i>
+                                Mon-Sat: 9:00 AM - 7:00 PM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 - Location -->
+                <div class="card-hover bg-gradient-to-br from-eco-green-50 to-white p-8 rounded-2xl shadow-lg border border-eco-green-100 animate-zoom-in">
+                    <div class="w-20 h-20 bg-gradient-to-br from-eco-green-100 to-eco-green-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                        <i class='bx bx-current-location text-4xl text-eco-green-600'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 text-center mb-4">Office Location</h3>
+                    <div class="space-y-4">
+                        <div class="text-center mb-4">
+                            <h4 class="text-lg font-semibold text-eco-green-700 mb-2">MJ & COMPANY</h4>
+                            <div class="w-12 h-1 bg-eco-green-500 mx-auto rounded-full"></div>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-gray-700 leading-relaxed">
+                                Jaigiri Christuraj Church, Ground 8/76 D,<br>
+                                Mangalathu Building, Kuriam to Valayala Road,<br>
+                                Kuruvilagand P.O, Kottayam District,<br>
+                                PIN: 686633, Kerala, India
+                            </p>
+                        </div>
+                        <div class="pt-4 text-center">
+                            <a href="#map-section" class="inline-flex items-center text-eco-green-600 hover:text-eco-green-700 font-medium">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                View on Map
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 - Email -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 animate-slide-right">
+                    <div class="w-20 h-20 bg-gradient-to-br from-eco-green-100 to-eco-green-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                        <i class='bx bx-envelope text-4xl text-eco-green-600'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 text-center mb-4">Email Information</h3>
+                    <div class="space-y-6 text-center">
+                        <div>
+                            <p class="text-gray-600 mb-2">Primary Email</p>
+                            <a href="mailto:info@ecocraftboards.com" class="text-xl font-medium text-eco-green-600 hover:text-eco-green-700 transition-colors">
+                                info@ecocraftboards.com
+                            </a>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 mb-2">Support Email</p>
+                            <a href="mailto:support@ecocraftboards.com" class="text-lg text-gray-800 hover:text-eco-green-600 transition-colors">
+                                support@ecocraftboards.com
+                            </a>
+                        </div>
+                        <div class="pt-4">
+                            <p class="text-sm text-gray-500">
+                                <i class="fas fa-reply mr-1"></i>
+                                Response within 4 hours
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map-section" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Find Our <span class="text-eco-green-600">Location</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Visit our office or get directions to plan your visit. We're easily accessible from major routes.
+                </p>
+            </div>
+
+            <!-- Map Container -->
+            <div class="rounded-2xl overflow-hidden shadow-2xl animate-fade-in">
+                <div class="w-full h-96 md:h-[500px]">
+                    <iframe 
+                        class="w-full h-full" 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15729.394036582422!2d76.562613!3d9.7365173!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07d14508d8e601%3A0xf4fc301f30ba3ca2!2sStar%20plywoods!5e0!3m2!1sen!2sin!4v1725625928598!5m2!1sen!2sin" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ecocraft Office Location">
+                    </iframe>
+                </div>
+                
+                <!-- Map Info Overlay -->
+                <div class="bg-white p-6 border-t border-gray-200">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Star Plywoods - Ecocraft Office</h3>
+                            <p class="text-gray-600">
+                                <i class="fas fa-map-marker-alt text-eco-green-600 mr-2"></i>
+                                Kuruvilagand P.O, Kottayam, Kerala 686633
+                            </p>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://maps.google.com/?q=9.7365173,76.562613" 
+                               target="_blank"
+                               class="inline-flex items-center bg-eco-green-600 text-white px-6 py-3 rounded-lg hover:bg-eco-green-700 transition-colors">
+                                <i class="fas fa-directions mr-2"></i>
+                                Get Directions
+                            </a>
+                            <a href="tel:+919447440617"
+                               class="inline-flex items-center border border-eco-green-600 text-eco-green-600 px-6 py-3 rounded-lg hover:bg-eco-green-50 transition-colors">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                Call Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Directions Info -->
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-eco-green-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-car text-eco-green-600"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold">By Car</h4>
+                    </div>
+                    <p class="text-gray-600">
+                        Easily accessible via Kuriam to Valayala Road. Ample parking available at the location.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-eco-green-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-bus text-eco-green-600"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold">Public Transport</h4>
+                    </div>
+                    <p class="text-gray-600">
+                        Well connected by local buses. Nearest bus stop is 500m from the office.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-eco-green-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-clock text-eco-green-600"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold">Business Hours</h4>
+                    </div>
+                    <p class="text-gray-600">
+                        Monday - Saturday: 9:00 AM - 7:00 PM<br>
+                        Sunday: By appointment only
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 bg-gradient-to-br from-eco-green-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Contact Form -->
+                <div class="animate-slide-left">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+                        <div class="text-center mb-8">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
+                            <p class="text-gray-600">
+                                Fill out the form below and our team will get back to you within 24 hours.
+                            </p>
+                        </div>
+
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="firstName">
+                                        First Name *
+                                    </label>
+                                    <input type="text" 
+                                           id="firstName" 
+                                           name="firstName"
+                                           required
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-eco-green-500 focus:ring-2 focus:ring-eco-green-200 outline-none transition-all duration-300 form-input"
+                                           placeholder="Enter your first name">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="lastName">
+                                        Last Name *
+                                    </label>
+                                    <input type="text" 
+                                           id="lastName" 
+                                           name="lastName"
+                                           required
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-eco-green-500 focus:ring-2 focus:ring-eco-green-200 outline-none transition-all duration-300 form-input"
+                                           placeholder="Enter your last name">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="email">
+                                        Email Address *
+                                    </label>
+                                    <input type="email" 
+                                           id="email" 
+                                           name="email"
+                                           required
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-eco-green-500 focus:ring-2 focus:ring-eco-green-200 outline-none transition-all duration-300 form-input"
+                                           placeholder="your@email.com">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="phone">
+                                        Phone Number *
+                                    </label>
+                                    <input type="tel" 
+                                           id="phone" 
+                                           name="phone"
+                                           required
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-eco-green-500 focus:ring-2 focus:ring-eco-green-200 outline-none transition-all duration-300 form-input"
+                                           placeholder="+91 1234567890">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2" for="subject">
+                                    Subject *
+                                </label>
+                                <select id="subject" 
+                                        name="subject"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-eco-green-500 focus:ring-2 focus:ring-eco-green-200 outline-none transition-all duration-300 form-input">
+                                    <option value="">Select a subject</option>
+                                    <option value="product-inquiry">Product Inquiry</option>
+                                    <option value="price-quote">Price Quote</option>
+                                    <option value="technical-support">Technical Support</option>
+                                    <option value="partnership">Business Partnership</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2" for="message">
+                                    Message *
+                                </label>
+                                <textarea id="message" 
+                                          name="message"
+                                          rows="5"
+                                          required
+                                          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-eco-green-500 focus:ring-2 focus:ring-eco-green-200 outline-none transition-all duration-300 form-input resize-none"
+                                          placeholder="Tell us about your project or inquiry..."></textarea>
+                            </div>
+
+                            <div>
+                                <button type="submit"
+                                        class="w-full bg-gradient-to-r from-eco-green-500 to-eco-green-600 text-white font-semibold py-4 px-6 rounded-lg hover:shadow-lg hover:from-eco-green-600 hover:to-eco-green-700 transition-all duration-300 transform hover:-translate-y-1">
+                                    <i class="fas fa-paper-plane mr-2"></i>
+                                    Send Message
+                                </button>
+                            </div>
+
+                            <p class="text-center text-gray-500 text-sm">
+                                By submitting this form, you agree to our 
+                                <a href="#" class="text-eco-green-600 hover:underline">Privacy Policy</a>.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="animate-slide-right">
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-6">
+                                Why Choose <span class="text-eco-green-600">Ecocraft</span>
+                            </h3>
+                            <p class="text-gray-600 mb-8 leading-relaxed">
+                                With 40 years of experience in premium plywood manufacturing, we provide expert consultation, 
+                                quality assurance, and comprehensive support for all your interior project needs.
+                            </p>
+                        </div>
+
+                        <!-- Quick Contact -->
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-6">Quick Contact</h4>
+                            <div class="space-y-4">
+                                <a href="tel:+919447440617" 
+                                   class="flex items-center p-3 rounded-lg hover:bg-eco-green-50 transition-colors group">
+                                    <div class="w-10 h-10 bg-eco-green-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-phone text-eco-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-gray-900 group-hover:text-eco-green-700">Call Now</div>
+                                        <div class="text-sm text-gray-500">+91 9447440617</div>
+                                    </div>
+                                </a>
+                                <a href="https://wa.me/917736688827" 
+                                   target="_blank"
+                                   class="flex items-center p-3 rounded-lg hover:bg-eco-green-50 transition-colors group">
+                                    <div class="w-10 h-10 bg-eco-green-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fab fa-whatsapp text-eco-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-gray-900 group-hover:text-eco-green-700">WhatsApp</div>
+                                        <div class="text-sm text-gray-500">+91 77366 88827</div>
+                                    </div>
+                                </a>
+                                <a href="mailto:info@ecocraftboards.com" 
+                                   class="flex items-center p-3 rounded-lg hover:bg-eco-green-50 transition-colors group">
+                                    <div class="w-10 h-10 bg-eco-green-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-envelope text-eco-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-gray-900 group-hover:text-eco-green-700">Email Us</div>
+                                        <div class="text-sm text-gray-500">info@ecocraftboards.com</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Response Time -->
+                        <div class="bg-gradient-to-r from-eco-green-500 to-eco-green-600 rounded-xl p-6 text-white">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <i class="fas fa-bolt text-2xl"></i>
+                                <h4 class="text-xl font-semibold">Fast Response Time</h4>
+                            </div>
+                            <ul class="space-y-3">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle mr-3"></i>
+                                    <span>Phone calls answered within 3 rings</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle mr-3"></i>
+                                    <span>Email response within 4 hours</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle mr-3"></i>
+                                    <span>WhatsApp messages within 30 minutes</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Frequently Asked <span class="text-eco-green-600">Questions</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Find quick answers to common questions about our products and services.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- FAQ 1 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            What are your business hours?
+                        </h3>
+                        <i class="fas fa-chevron-down text-eco-green-600"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600">
+                        <p>Our office is open Monday to Saturday from 9:00 AM to 7:00 PM. Sunday visits are by appointment only.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            Do you provide free consultation?
+                        </h3>
+                        <i class="fas fa-chevron-down text-eco-green-600"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600">
+                        <p>Yes, we offer free consultation for all our products and services. Our experts will guide you through product selection, pricing, and project planning.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            How long does it take to get a quote?
+                        </h3>
+                        <i class="fas fa-chevron-down text-eco-green-600"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600">
+                        <p>We typically provide quotes within 24 hours of receiving your inquiry. For complex projects, it may take up to 48 hours.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            Do you offer installation services?
+                        </h3>
+                        <i class="fas fa-chevron-down text-eco-green-600"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600">
+                        <p>Yes, we provide professional installation services through our network of certified partners across Kerala.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-eco-green-600 to-emerald-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Start Your Project?
+            </h2>
+            <p class="text-xl text-eco-green-100 mb-10 max-w-3xl mx-auto">
+                Contact us today for a free consultation and discover how Ecocraft can transform your interior spaces.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+919447440617" 
+                   class="inline-flex items-center justify-center bg-white text-eco-green-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fas fa-phone-alt mr-3"></i>
+                    Call Now: +91 9447440617
+                </a>
+                <a href="https://wa.me/917736688827" 
+                   target="_blank"
+                   class="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                    <i class="fab fa-whatsapp mr-3"></i>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-eco-green-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">E</span>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold">
+                                <span class="text-eco-green-400">ECO</span>
+                                <span class="text-white">CRAFT</span>
+                            </div>
+                            <div class="text-xs text-gray-400">Since 1984</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Four decades of crafting excellence in premium plywood solutions. Quality, innovation, and sustainability at the core.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-eco-green-600 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-eco-green-600 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-eco-green-600 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-eco-green-400 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-eco-green-400 transition-colors">About Us</a></li>
+                        <!-- <li><a href="products.html" class="text-gray-400 hover:text-eco-green-400 transition-colors">Products</a></li> -->
+                        <li><a href="contact.html" class="text-eco-green-400 font-medium">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Our Products</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-eco-green-400 transition-colors">Plywood Series</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-eco-green-400 transition-colors">PVC Boards</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-eco-green-400 transition-colors">WPC Boards</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-eco-green-400 transition-colors">All Products</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-eco-green-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Kuruvilagand P.O, Kottayam, Kerala 686633</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-eco-green-400 mr-3"></i>
+                            <a href="tel:+919447440617" class="text-gray-400 hover:text-eco-green-400 transition-colors">+91 9447440617</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-eco-green-400 mr-3"></i>
+                            <a href="mailto:info@ecocraftboards.com" class="text-gray-400 hover:text-eco-green-400 transition-colors">info@ecocraftboards.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2024 Ecocraft. All rights reserved.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-eco-green-400 text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-eco-green-400 text-sm transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-eco-green-400 text-sm transition-colors">Disclaimer</a>
+                    </div>
+                </div>
+                <div class="text-center mt-6">
+                    <div class="flex flex-wrap justify-center items-center gap-4 text-gray-500 text-sm">
+                        <span class="flex items-center">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            ISO 9001:2015 Certified
+                        </span>
+                        <span class="flex items-center">
+                            <i class="fas fa-award mr-2"></i>
+                            BS 1088 Standard
+                        </span>
+                        <span class="flex items-center">
+                            <i class="fas fa-flag mr-2"></i>
+                            Made in India
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const header = document.querySelector('header');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function() {
+                // Create mobile menu if it doesn't exist
+                let mobileMenu = document.getElementById('mobile-menu');
+                
+                if (!mobileMenu) {
+                    mobileMenu = document.createElement('div');
+                    mobileMenu.id = 'mobile-menu';
+                    mobileMenu.className = 'md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200';
+                    mobileMenu.innerHTML = `
+                        <div class="p-4 space-y-4">
+                            <a href="index.html" class="block py-2 text-gray-600 hover:text-eco-green-600 font-medium">Home</a>
+                            <a href="about.html" class="block py-2 text-gray-600 hover:text-eco-green-600 font-medium">About Us</a>
+                            <a href="products.html" class="block py-2 text-gray-600 hover:text-eco-green-600 font-medium">Products</a>
+                            <a href="contact.html" class="block py-2 text-eco-green-600 font-medium">Contact</a>
+                        </div>
+                    `;
+                    header.appendChild(mobileMenu);
+                    
+                    // Show menu
+                    mobileMenu.classList.remove('hidden');
+                    
+                    // Toggle icon
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function closeMenu(e) {
+                        if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                            mobileMenu.remove();
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                            document.removeEventListener('click', closeMenu);
+                        }
+                    });
+                } else {
+                    mobileMenu.remove();
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitButton = this.querySelector('button[type="submit"]');
+                const originalText = submitButton.innerHTML;
+                
+                // Show loading state
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+                submitButton.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    // Show success message
+                    alert('Thank you! Your message has been sent successfully. We will get back to you within 24 hours.');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Reset button
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                }, 1500);
+            });
+        }
+
+        // FAQ Toggle
+        document.querySelectorAll('.bg-gray-50 button').forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    content.style.marginTop = null;
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    content.style.marginTop = '1rem';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+
+        // Scroll animations
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-fade-in, .animate-slide-left, .animate-slide-right, .animate-zoom-in');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0) translateX(0) scale(1)";
+                }
+            });
+        };
+
+        // Set initial states for animated elements
+        document.querySelectorAll('.animate-fade-in').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+        });
+        
+        document.querySelectorAll('.animate-slide-left').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateX(-50px)";
+        });
+        
+        document.querySelectorAll('.animate-slide-right').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateX(50px)";
+        });
+        
+        document.querySelectorAll('.animate-zoom-in').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "scale(0.95)";
+        });
+
+        // Trigger animations
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add hover effects to cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+        });
+    </script>
+</body>
+</html>
